@@ -27,7 +27,7 @@ test('null is empty', () => {
 });
 
 test('0 is not empty', () => {
-    expect(isEmpty(null)).toBeTruthy();
+    expect(isEmpty(0)).toBeFalsy();
 });
 
 test('some string is not empty', () => {
