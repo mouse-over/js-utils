@@ -1,13 +1,14 @@
 {
   "name": "@mouseover/js-utils",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "JS utils",
   "main": "lib/utils.js",
   "repository": "github:mouse-over/js-utils",
   "scripts": {
     "build": "rollup -c",
     "test.watch": "yarn test --watchAll",
-    "test": "jest"
+    "test": "jest",
+    "docs": "documentation build 'src/**' -f html -o docs"
   },
   "keywords": [],
   "author": "Vaclav Prokes <vprokes@mouose-over.net>",
@@ -17,11 +18,12 @@
     "lib"
   ],
   "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "babel-jest": "^24.8.0",
-    "jest": "^24.8.0",
-    "rollup": "^1.19.4",
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "babel-jest": "^24.9.0",
+    "documentation": "^12.1.4",
+    "jest": "^24.9.0",
+    "rollup": "^1.27.13",
     "rollup-plugin-babel": "^4.3.3"
   },
   "jest": {

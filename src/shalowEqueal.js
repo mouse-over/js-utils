@@ -1,5 +1,3 @@
-// Taken from reduxjs/react-redux src/utils/shallowEqual.js
-
 const hasOwn = Object.prototype.hasOwnProperty;
 
 function is(x, y) {
@@ -10,6 +8,15 @@ function is(x, y) {
     }
 }
 
+/**
+ * Compares to objects
+ *
+ * Taken from reduxjs/react-redux src/utils/shallowEqual.js
+ *
+ * @param {object} objA
+ * @param {object} objB
+ * @returns {boolean}
+ */
 export function shallowEqual(objA, objB) {
     if (is(objA, objB)) return true;
 

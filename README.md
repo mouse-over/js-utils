@@ -2,8 +2,6 @@
 
 > This library is proof of concept.
 
-
-
 ## Install
 
 npm:
@@ -17,6 +15,10 @@ yarn:
 ```sh
 yarn add @mouseover/js-utils
 ```
+
+## API
+
+### Table of contents
 
 ## License
 
