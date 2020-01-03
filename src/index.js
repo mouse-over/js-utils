@@ -2,7 +2,7 @@ import {isEmpty} from "./is";
 
 export {
     isEmpty, isObject, isValidMin, isValidMax, isValidMaxLength, isValidMinLength, isNumber, isValidPattern, isEmail, isRequired,
-    normalizeToString
+    normalizeToString, isString
 }from './is';
 
 export {shallowEqual} from './shalowEqueal';

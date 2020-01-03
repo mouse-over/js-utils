@@ -68,6 +68,27 @@ test('is valid pattern', () => {
 test('is invalid pattern', () => {
     expect(isValidPattern('foo', 'boo')).not.toBeTruthy();
 });
+
+test('pattern validation of null', () => {
+    expect(isValidPattern(null, 'boo')).not.toBeTruthy();
+});
+
+test('pattern validation of undefined', () => {
+    expect(isValidPattern(undefined, 'boo')).not.toBeTruthy();
+});
+
+test('pattern validation of number', () => {
+    expect(isValidPattern(2, 'boo')).not.toBeTruthy();
+});
+
+test('pattern validation of object', () => {
+    expect(isValidPattern({}, 'boo')).not.toBeTruthy();
+});
+
+test('pattern validation of function', () => {
+    expect(isValidPattern(() => {}, 'boo')).not.toBeTruthy();
+});
+
 test('{} is object', () => {
     expect(isObject({})).toBeTruthy();
 });
@@ -125,6 +146,11 @@ test('null normalizeToString', () => {
 
 test('undefined normalizeToString', () => {
     expect(normalizeToString(undefined)).toBe('');
+});
+
+test('bool normalizeToString', () => {
+    expect(normalizeToString(true)).toBe('true');
+    expect(normalizeToString(false)).toBe('false');
 });
 
 test('is valid min length 1', () => {

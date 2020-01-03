@@ -24,7 +24,8 @@ export const isEmpty = (val) => {
 };
 
 export const isValidPattern = (value, regex) => {
-    return value.toString().match(regex) !== null;
+    const s = normalizeToString(value);
+    return isString(s) ? s.match(regex) !== null : false;
 };
 
 export const isEmail = (value) => {
@@ -60,6 +61,10 @@ export const isRequired =(value, required) => {
     return true;
 };
 
+export const isString = (value) => typeof value === 'string';
+export const isBoolean = (value) => typeof value === 'boolean';
+export const isStringObject = (value) => value instanceof String;
+
 export const normalizeToString = (value) => {
     if (isNumber(value)) {
         return '' + value;
@@ -67,6 +72,10 @@ export const normalizeToString = (value) => {
 
     if (isEmpty(value)) {
         return '';
+    }
+
+    if (isBoolean(value) || isStringObject(value)) {
+        return value.toString();
     }
 
     return value;
