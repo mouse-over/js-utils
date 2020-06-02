@@ -1,6 +1,6 @@
 {
   "name": "@mouseover/js-utils",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "JS utils",
   "main": "lib/utils.js",
   "repository": "github:mouse-over/js-utils",

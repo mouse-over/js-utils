@@ -21,7 +21,7 @@ export const getOnPath = (object, path) => {
     const length = path.length;
 
     while (leaf !== undefined && index < length) {
-        leaf = leaf[path[index++]];
+        leaf = (leaf || {})[path[index++]];
     }
 
     return leaf;

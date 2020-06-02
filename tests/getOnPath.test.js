@@ -7,3 +7,7 @@ test('getOnPath existing value', () => {
 test('getOnPath not existing value', () => {
     expect(getOnPath({foo: 'bar'}, ['bar'])).toBeUndefined();
 });
+
+test('getOnPath not existing value container', () => {
+    expect(getOnPath({foo: null}, ['foo','bar'])).toBeUndefined();
+});
